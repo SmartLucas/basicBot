@@ -167,7 +167,7 @@
     var basicBot = {
         version: "2.1.0",
         status: false,
-        name: "basicBot",
+        name: StratBot,
         loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
@@ -176,8 +176,8 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "basicBot",
-            language: "english",
+            botName: "StratBOT",
+            language: "portuguese",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             maximumAfk: 120,
             afkRemoval: true,
