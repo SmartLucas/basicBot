@@ -179,7 +179,7 @@
         settings: {
             botName: "StratBOT",
             language: "portuguese",
-            chatLink: "https://rawgit.com/StratBot/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/StratBot/basicBot/master/lang/pt.json",
             maximumAfk: 120,
             afkRemoval: true,
             maximumDc: 60,
