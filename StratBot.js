@@ -165,7 +165,7 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "2.1.0",
+        version: "Beta.Test",
         status: false,
         name: StratBot,
         loggedInID: null,
