@@ -7,6 +7,19 @@
 
 (function () {
 
+    API.getWaitListPosition = function(id){
+        if(typeof id === 'undefined' || id === null){
+            id = API.getUser().id;
+        }
+        var wl = API.getWaitList();
+        for(var i = 0; i < wl.length; i++){
+            if(wl[i].id === id){
+                return i;
+            }
+        }
+        return -1;
+    };
+    
     var kill = function () {
         clearInterval(basicBot.room.autodisableInterval);
         clearInterval(basicBot.room.afkInterval);
@@ -165,11 +178,11 @@
     var botCreatorIDs = [];
 
     var basicBot = {
-        version: "Beta.Test",
+        version: "2.1.4",
         status: false,
-        name: StratBot,
+        name: basicBot,
         loggedInID: null,
-        scriptLink: "https://rawgit.com/StratBot/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/basicBot/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/StratBot
         /basicBot/master/lang/en.json",
@@ -177,7 +190,7 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "StratBOT",
+            botName: "basicBot",
             language: "portuguese",
             chatLink: "https://rawgit.com/StratBot/basicBot/master/lang/pt.json",
             maximumAfk: 120,
@@ -1231,6 +1244,26 @@
                         }
                 },
              **/
+
+            updateCommand: {
+                        command: 'update',
+                        rank: 'bouncer',
+                        type: 'startsWith',
+                        functionality: function(chat, cmd){
+                                if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                                if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
+                                else{
+                                API.sendChat(basicBot.chat.FoundUpdate)
+                                API.sendChat(basicBot.chat.reload);
+                        storeToStorage();
+                        basicBot.disconnectAPI();
+                        kill();
+                        setTimeout(function () {
+                            $.getScript(basicBot.scriptLink);
+                        }, 2000);
+                                }
+                        }
+                },
 
             activeCommand: {
                 command: 'active',
