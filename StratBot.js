@@ -1245,26 +1245,6 @@
                 },
              **/
 
-            updateCommand: {
-                        command: 'update',
-                        rank: 'bouncer',
-                        type: 'startsWith',
-                        functionality: function(chat, cmd){
-                                if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                                if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
-                                else{
-                                API.sendChat(basicBot.chat.FoundUpdate)
-                                API.sendChat(basicBot.chat.reload);
-                        storeToStorage();
-                        basicBot.disconnectAPI();
-                        kill();
-                        setTimeout(function () {
-                            $.getScript(basicBot.scriptLink);
-                        }, 2000);
-                                }
-                        }
-                },
-
             activeCommand: {
                 command: 'active',
                 rank: 'bouncer',
