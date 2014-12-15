@@ -7,7 +7,7 @@
     "online": "/me %%BOTNAME%% v%%VERSION%% online!",
 
 
-    "welcome": "Bem vindo(a), %%NAME%%",
+    "welcome": "%%NAME%% ,Seja welcomido. Leia as regras da sala: http://goo.gl/6RP5x1",
     "welcomeback": "Bem vindo(a) de volta, %%NAME%%",
     "songknown": "/me :repeat: Essa música foi tocada %%PLAYS%% vez(es) nos últimos %%TIMETOTAL%%. Última vez: %%LASTTIME%% atrás. :repeat:",
     "timelimit": "@%%NAME%%, sua música tem duração maior que %%MAXLENGTH%% minutos. Você precisa de permissão para tocar músicas longas.",
