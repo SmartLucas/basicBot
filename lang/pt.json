@@ -111,7 +111,8 @@
     "muterank": "/me [@%%NAME%%] Você não pode mutar usuários do mesmo nível ou superior.",
     "oplist": "/me Lista OP: %%LINK%%",
     "pong": "/me Pong!",
-    "reload": "Update encontrado %%VERSION%% !",
+    "reload": "Update encontrado v%%VERSION%% !",
+    "currentversion": "Versão atual: v%%VERSION%% ."
     "removenotinwl": "/me [@%%NAME%%] Usuário @%%USERNAME%% não está na fila de espera.",
     "roomrules": "/me Encontre as regras da sala aqui: %%LINK%%",
     "sessionstats": "/me [@%%NAME%%] Total woots: %%WOOTS%%, total mehs: %%MEHS%%, total grabs: %%GRABS%%.",
