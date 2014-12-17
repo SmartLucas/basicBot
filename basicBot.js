@@ -189,9 +189,9 @@
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         settings: {
-            botName: "basicBot",
-            language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+            botName: "Cursinho de Zoeira",
+            language: "portuguese",
+            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
             maximumAfk: 120,
             afkRemoval: true,
             maximumDc: 60,
@@ -1251,6 +1251,21 @@
                         }
                 },
              **/
+
+            versionCommand: {
+                        command: 'version',
+                        rank: 'bouncer',
+                        type: 'startsWith',
+                        functionality: function(chat, cmd){
+                                if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                                if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
+                                else{
+                                API.sendChat('Versão atual: ' + version + '.')    
+                                
+                                }
+                        }
+                },
+             
 
             activeCommand: {
                 command: 'active',
