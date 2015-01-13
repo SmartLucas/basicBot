@@ -40,7 +40,7 @@
     "spam": "/me @%%NAME%%, não faça spam, por favor.",
     "roomadvertising": "@%%NAME%%, não poste link de outras comunidades, por favor.",
     "adfly": "@%%NAME%%, por favor mude seu script autowoot. Nós sugerimos plugCubed: http://plugcubed.net/",
-
+    "tech": "Tech Blog com mais regularidade para informá-lo em quais erros os desenvolvedores estão trabalhando. http://tech.plug.dj/",
 
     "invalidtime": "/me [@%%NAME%%] Tempo inválido.",
     "nouserspecified": "/me [@%%NAME%%] Usuário não especificado.",
